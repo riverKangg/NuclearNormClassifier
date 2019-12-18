@@ -1,1 +1,3 @@
 # NuclearNormClassifier
+
+*Jisun Kang*
