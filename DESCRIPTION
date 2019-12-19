@@ -4,6 +4,6 @@ Title: Nuclear Norm Classifier
 Version: 0.1.0
 Author: Jisun Kang
 Maintainer: The package maintainer <jissun@skku.edu>
-Description: This package implements the ADMM algorithm that solves the nuclear norm regression problem and the FAST_ADMM algorithm that speeds up the convergence.
+Description: NuclearNormClassifier package implements the ADMM algorithm that solves the nuclear norm regression problem and the FAST_ADMM algorithm that speeds up the convergence.
 Encoding: UTF-8
 LazyData: true
