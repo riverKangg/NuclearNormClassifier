@@ -11,6 +11,7 @@ library("devtools")
 Then install as follow
 ```{R}
 install_github("NuclearNormClassifier")
+library("NuclearNormClassifier")
 ```
 
 For detailed introduction and tutorial, please see NuclearNormClassifier's vignette
