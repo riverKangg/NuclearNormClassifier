@@ -25,7 +25,7 @@ svt <- function(mu,A_x,B,Z) {
 ########################## FAST ADMM ##########################
 ###############################################################
 
-FAST_ADMM_NMR_fit <- function(){
+fast_admm_nmr_fit <- function(){
   p<-dim(A)[1]; q<-dim(A)[2]; n<-dim(A)[3];
   # step 1
   h <- array(rep(0,p*q),dim=c(p*q,n))
@@ -77,7 +77,7 @@ FAST_ADMM_NMR_fit <- function(){
 
 ########################## clf ##########################
 
-FAST_ADMM_NMR_clf <- function(A,B,label){
+fast_admm_nmr_clf <- function(A,B,label){
   x <- FAST_ADMM_NMR_fit(A,B)
   A_x <- coef_img(A,x)
 
@@ -105,7 +105,7 @@ FAST_ADMM_NMR_clf <- function(A,B,label){
 
 ####################### clf top #######################
 
-FAST_ADMM_NMR_clf_top <- function(A,B,label,top_num){
+fast_admm_nmr_clf_top <- function(A,B,label,top_num){
   x <- FAST_ADMM_NMR_fit(A,B)
   A_x <- coef_img(A,x)
   # A_x_i 구하기 + error 구하기
