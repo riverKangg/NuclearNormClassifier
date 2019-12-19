@@ -14,4 +14,4 @@ install_github("NuclearNormClassifier")
 library("NuclearNormClassifier")
 ```
 
-For detailed introduction and tutorial, please see NuclearNormClassifier's vignette
+For detailed introduction and tutorial, please see NuclearNormClassifier's doc.
