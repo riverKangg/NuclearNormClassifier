@@ -35,9 +35,7 @@ admm_nmr_clf(A, B, label)
 \references{
 %% ~put references to the literature/web site here ~
 }
-\author{
-%%  ~~who you are~~
-}
+\author{Jisun Kang}
 \note{
 %%  ~~further notes~~
 }
@@ -53,7 +51,7 @@ admm_nmr_clf(A, B, label)
 ##--	or do  help(data=index)  for the standard data sets.
 
 ## The function is currently defined as
-function (A, B, label) 
+function (A, B, label)
 {
     x <- ADMM_NMR_fit(A, B)
     A_x <- coef_img(A, x)
