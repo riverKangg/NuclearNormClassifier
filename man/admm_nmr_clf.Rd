@@ -1,12 +1,7 @@
 \name{admm_nmr_clf}
 \alias{admm_nmr_clf}
-%- Also NEED an '\alias' for EACH other topic documented here.
-\title{
-%%  ~~function to do ... ~~
-}
-\description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
-}
+\title{Classification using nuclear norm regression}
+\description{Entering the training data set and the test data returns the optimal label.}
 \usage{
 admm_nmr_clf(A, B, label)
 }
