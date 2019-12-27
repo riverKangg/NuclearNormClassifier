@@ -12,23 +12,24 @@ You can use the output of this function for classification.
 \usage{
 admm_nmr_fit(max_iter, ep_abs, ep_rel, A, B)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{max_iter}{
-Maximum number of iterations
-}
+  Maximum number of iterations
+  }
   \item{ep_abs}{
-Parameter used for termination conditions
-}
+  Parameter used for termination conditions
+  }
   \item{ep_rel}{
-Parameter used for termination conditions
-}
+  Parameter used for termination conditions
+  }
   \item{A}{
-A is a train data set in the form of a three-dimensional array.
-}
+  "A" is a train data set in the form of a three-dimensional array.
+  This data set contains several face images used for algorithm learning.
+  }
   \item{B}{
-B is a test image with occlusion.
-}
+  "B" is an image of a face with occlusion.
+  }
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
@@ -41,7 +42,7 @@ B is a test image with occlusion.
 %% ...
 }
 \references{
-
+\link{https://ieeexplore.ieee.org/document/7420697}
 }
 \author{Jisun Kang}
 \note{
@@ -49,7 +50,7 @@ B is a test image with occlusion.
 }
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+\code{\link{https://web.stanford.edu/~boyd/papers/pdf/admm_slides.pdf}}
 }
 \examples{
 ##---- Should be DIRECTLY executable !! ----
@@ -90,7 +91,6 @@ function (max_iter, ep_abs, ep_rel, A, B)
     return(X_new)
   }
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+
+\keyword{The alternating direction method of multipliers}
+\keyword{The nuclear norm regression}

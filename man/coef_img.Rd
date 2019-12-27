@@ -1,22 +1,22 @@
 \name{coef_img}
 \alias{linear combination}
-\title{
-This function performs linear combination of train images.
-}
-\description{
+\title{coefficient image}
 
+\description{
+  This function performs linear combination of train images.
 }
 \usage{
-coef_img(A, x)
+  coef_img(A, x)
 }
 
 \arguments{
   \item{A}{
-A is a train data set in the form of a three-dimensional array.
-}
+  "A" is a train data set in the form of a three-dimensional array.
+  This data set contains several face images used for algorithm learning.
+  }
   \item{x}{
-x is a coefficient vector for the train images.
-}
+  "x" is a coefficient vector for the train images.
+  }
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
@@ -29,7 +29,7 @@ x is a coefficient vector for the train images.
 %% ...
 }
 \references{
-
+\link{https://ieeexplore.ieee.org/document/7420697}
 }
 \author{Jisun Kang}
 \note{

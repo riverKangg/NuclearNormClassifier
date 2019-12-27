@@ -1,45 +1,41 @@
 \name{admm_nmr_clf}
 \alias{admm_nmr_clf}
 \title{Classification using nuclear norm regression}
+
 \description{Entering the training data set and the test data returns the optimal label.}
 \usage{
 admm_nmr_clf(A, B, label)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{A}{
-%%     ~~Describe \code{A} here~~
-}
+  "A" is a train data set in the form of a three-dimensional array.
+  This data set contains several face images used for algorithm learning.
+  }
   \item{B}{
-%%     ~~Describe \code{B} here~~
-}
+  "B" is an image of a face with occlusion.
+  }
   \item{label}{
-%%     ~~Describe \code{label} here~~
+  "label" is a vector representing a label for train dataset A.
+  }
 }
-}
+
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
+
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+  \item{val}{
+  The result of classification. It represents the optimal label.
+  }
 }
+
 \references{
-%% ~put references to the literature/web site here ~
+  \link{https://ieeexplore.ieee.org/document/7420697}
 }
 \author{Jisun Kang}
-\note{
-%%  ~~further notes~~
-}
+\note{}
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
 ##---- Should be DIRECTLY executable !! ----
 ##-- ==>  Define data, use random,
@@ -66,7 +62,6 @@ function (A, B, label)
     return(val)
   }
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+
+\keyword{Image data}
+\keyword{Classification}

@@ -1,41 +1,44 @@
 \name{svt}
-\alias{singular value thresholding}
-\title{This function performs singular value thresholding. }
-\description{This function performs singular value thresholding. Singular value thresholding is used to update y that cannot be represented in closed form. Entering the parameters mu, A (x), B, and Z returns the y after performing singular value thresholding.}
+\alias{svt}
+\title{Singular value thresholding}
+
+\description{
+  This function performs singular value thresholding.
+  Singular value thresholding is used to update y that cannot be represented in closed form.
+  Entering the parameters mu, A (x), B, and Z returns the y after performing singular value thresholding.
+}
+
 \usage{svt(mu, A_x, B, Z)}
+
 \arguments{
   \item{mu}{
-Parameter to be set when defining a function.
-}
+  Parameter to be set when defining a function.
+  }
   \item{A_x}{
-A_x is a result obtained by correlation coefficient x with A, a test image data set. This can be made using the coef_img function.
-}
+  A_x is a result obtained by correlation coefficient x with A, a test image data set. This can be made using the coef_img function.
+  }
   \item{B}{
-B represents an image of a face with occlusion.
-}
+  "B" is an image of a face with occlusion.
+  }
   \item{Z}{
-Z can be found using A, B, and y. It can be calculated naturally during algorithm implementation.
+  "Z" can be found using A, B, and y. It can be calculated naturally during algorithm implementation.
+  }
 }
-}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
+\details{}
+
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+  \item{svt_out}{
+  "svt_out" is the y after performing singular value thresholding.
+  }
 }
+
 \references{
-%% ~put references to the literature/web site here ~
+  \link{https://ieeexplore.ieee.org/document/7420697}
 }
 \author{Jisun Kang}
-\note{
-%%  ~~further notes~~
-}
+\note{}
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+  \code{\link{https://arxiv.org/abs/0810.3286}}
 }
 \examples{
 ##---- Should be DIRECTLY executable !! ----
@@ -52,4 +55,5 @@ function (mu, A_x, B, Z)
     return(svt_out)
   }
 }
+
 \keyword{Singular value thresdholding}

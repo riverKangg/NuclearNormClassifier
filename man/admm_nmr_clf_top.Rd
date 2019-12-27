@@ -1,62 +1,53 @@
 \name{admm_nmr_clf_top}
 \alias{admm_nmr_clf_top}
-%- Also NEED an '\alias' for EACH other topic documented here.
-\title{
-%%  ~~function to do ... ~~
-}
+\title{}
+
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+
 }
 \usage{
-admm_nmr_clf_top(A, B, label, top_num)
+  admm_nmr_clf_top(A, B, label, top_num)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{A}{
-%%     ~~Describe \code{A} here~~
-}
+  "A" is a train data set in the form of a three-dimensional array.
+  This data set contains several face images used for algorithm learning.
+  }
   \item{B}{
-%%     ~~Describe \code{B} here~~
-}
+  "B" is an image of a face with occlusion.
+  }
   \item{label}{
-%%     ~~Describe \code{label} here~~
-}
+  "label" is a vector representing a label for train dataset A.
+  }
   \item{top_num}{
-%%     ~~Describe \code{top_num} here~~
+  "top_num" represents the number of classification candidates.
+  If "top_num" is 1, this function is the same as admm_nmr_clf.
+  }
 }
-}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
+\details{}
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+  \item{val_min[0]}{
+
+  }
+  \item{val_top}{
+
+  }
 }
 \references{
-%% ~put references to the literature/web site here ~
+  \link{https://ieeexplore.ieee.org/document/7420697}
 }
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
-}
+\author{Jisun Kang}
+\note{}
+\seealso{}
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
 ##---- Should be DIRECTLY executable !! ----
 ##-- ==>  Define data, use random,
 ##--	or do  help(data=index)  for the standard data sets.
 
 ## The function is currently defined as
-function (A, B, label, top_num) 
+function (A, B, label, top_num)
 {
     x <- ADMM_NMR_fit(A, B)
     A_x <- coef_img(A, x)
@@ -78,7 +69,6 @@ function (A, B, label, top_num)
     return(val_min[0], val_top)
   }
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+
+\keyword{Image classification}
+\keyword{top-n error}
