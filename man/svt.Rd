@@ -1,29 +1,13 @@
 \name{svt}
-\alias{svt}
-%- Also NEED an '\alias' for EACH other topic documented here.
-\title{
-%%  ~~function to do ... ~~
-}
-\description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
-}
-\usage{
-svt(mu, A_x, B, Z)
-}
-%- maybe also 'usage' for other objects documented here.
+\alias{singular value thresholding}
+\title{This function performs singular value thresholding. }
+\description{This function performs singular value thresholding. Singular value thresholding is used to update y that cannot be represented in closed form. Entering the parameters mu, A (x), B, and Z returns the y after performing singular value thresholding.}
+\usage{svt(mu, A_x, B, Z)}
 \arguments{
-  \item{mu}{
-%%     ~~Describe \code{mu} here~~
-}
-  \item{A_x}{
-%%     ~~Describe \code{A_x} here~~
-}
-  \item{B}{
-%%     ~~Describe \code{B} here~~
-}
-  \item{Z}{
-%%     ~~Describe \code{Z} here~~
-}
+  \item{mu}{Parameter to be set when defining a function.}
+  \item{A_x}{A_x is a result obtained by correlation coefficient x with A, a test image data set. This can be made using the coef_img function.}
+  \item{B}{B represents an image of a face with occlusion.}
+  \item{Z}{Z can be found using A, B, and y. It can be calculated naturally during algorithm implementation.}
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
@@ -56,7 +40,7 @@ svt(mu, A_x, B, Z)
 ##--	or do  help(data=index)  for the standard data sets.
 
 ## The function is currently defined as
-function (mu, A_x, B, Z) 
+function (mu, A_x, B, Z)
 {
     svt_in <- A_x - B + 1/mu * Z
     result_svd <- svd(svt_in)
@@ -65,7 +49,4 @@ function (mu, A_x, B, Z)
     return(svt_out)
   }
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{Singular value thresdholding}
