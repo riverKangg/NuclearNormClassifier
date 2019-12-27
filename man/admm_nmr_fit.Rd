@@ -1,14 +1,13 @@
 \name{admm_nmr_fit}
 \alias{admm_nmr_fit}
-%- Also NEED an '\alias' for EACH other topic documented here.
-\title{
-%%  ~~function to do ... ~~
-}
+\title{Fitting the ADMM algorithm for NMR}
+
 \description{
-This function fit the ADMM algorithm for the nuclear norm regression.
-It returns the optimal regression coefficient vector.
-You can use the output of this function for classification.
+  This function fit the ADMM algorithm for the nuclear norm regression.
+  It returns the optimal regression coefficient vector.
+  You can use the output of this function for classification.
 }
+
 \usage{
 admm_nmr_fit(max_iter, ep_abs, ep_rel, A, B)
 }
@@ -31,33 +30,25 @@ admm_nmr_fit(max_iter, ep_abs, ep_rel, A, B)
   "B" is an image of a face with occlusion.
   }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
+
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+  \item{X_new}{
+  "X_new" is the optimal regression coefficient vector.
+  }
 }
+
 \references{
-\link{https://ieeexplore.ieee.org/document/7420697}
+  \link{https://ieeexplore.ieee.org/document/7420697}
 }
+
 \author{Jisun Kang}
-\note{
-%%  ~~further notes~~
-}
+
 
 \seealso{
-\code{\link{https://web.stanford.edu/~boyd/papers/pdf/admm_slides.pdf}}
+  \code{\link{https://web.stanford.edu/~boyd/papers/pdf/admm_slides.pdf}}
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
 
-## The function is currently defined as
 function (max_iter, ep_abs, ep_rel, A, B)
 {
     p <- dim(A)[1]

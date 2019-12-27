@@ -25,10 +25,10 @@
   If "top_num" is 1, this function is the same as admm_nmr_clf.
   }
 }
-\details{}
+
 \value{
   \item{val_min[0]}{
-
+  The
   }
   \item{val_top}{
 
@@ -38,15 +38,9 @@
   \link{https://ieeexplore.ieee.org/document/7420697}
 }
 \author{Jisun Kang}
-\note{}
-\seealso{}
 
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
 
-## The function is currently defined as
 function (A, B, label, top_num)
 {
     x <- ADMM_NMR_fit(A, B)

@@ -18,35 +18,21 @@
   "x" is a coefficient vector for the train images.
   }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
+
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+  \item{A_x}{
+  "A_x" is a result obtained by correlation coefficient x with A, a test image data set.
+  }
 }
+
 \references{
-\link{https://ieeexplore.ieee.org/document/7420697}
+  \link{https://ieeexplore.ieee.org/document/7420697}
 }
+
 \author{Jisun Kang}
-\note{
-%%  ~~further notes~~
-}
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
 
-## The function is currently defined as
 function (A, x)
 {
     p <- dim(A)[1]

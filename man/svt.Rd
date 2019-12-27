@@ -12,10 +12,11 @@
 
 \arguments{
   \item{mu}{
-  Parameter to be set when defining a function.
+  "mu" is a parameter that must be set when defining a function.
   }
   \item{A_x}{
-  A_x is a result obtained by correlation coefficient x with A, a test image data set. This can be made using the coef_img function.
+  "A_x" is a result obtained by correlation coefficient x with A, a test image data set.
+  This can be made using the coef_img function.
   }
   \item{B}{
   "B" is an image of a face with occlusion.
@@ -24,6 +25,7 @@
   "Z" can be found using A, B, and y. It can be calculated naturally during algorithm implementation.
   }
 }
+
 \details{}
 
 \value{
@@ -35,17 +37,15 @@
 \references{
   \link{https://ieeexplore.ieee.org/document/7420697}
 }
+
 \author{Jisun Kang}
-\note{}
+
 \seealso{
   \code{\link{https://arxiv.org/abs/0810.3286}}
 }
-\examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
 
-## The function is currently defined as
+\examples{
+
 function (mu, A_x, B, Z)
 {
     svt_in <- A_x - B + 1/mu * Z

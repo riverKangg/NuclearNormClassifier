@@ -2,9 +2,12 @@
 \alias{admm_nmr_clf}
 \title{Classification using nuclear norm regression}
 
-\description{Entering the training data set and the test data returns the optimal label.}
+\description{
+  Entering the training data set and the test data returns the optimal label.
+}
+
 \usage{
-admm_nmr_clf(A, B, label)
+  admm_nmr_clf(A, B, label)
 }
 
 \arguments{
@@ -20,10 +23,6 @@ admm_nmr_clf(A, B, label)
   }
 }
 
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-
 \value{
   \item{val}{
   The result of classification. It represents the optimal label.
@@ -34,14 +33,9 @@ admm_nmr_clf(A, B, label)
   \link{https://ieeexplore.ieee.org/document/7420697}
 }
 \author{Jisun Kang}
-\note{}
 
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
 
-## The function is currently defined as
 function (A, B, label)
 {
     x <- ADMM_NMR_fit(A, B)
