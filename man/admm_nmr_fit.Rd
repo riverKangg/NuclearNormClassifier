@@ -5,7 +5,9 @@
 %%  ~~function to do ... ~~
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+This function fit the ADMM algorithm for the nuclear norm regression.
+It returns the optimal regression coefficient vector.
+You can use the output of this function for classification.
 }
 \usage{
 admm_nmr_fit(max_iter, ep_abs, ep_rel, A, B)
@@ -13,19 +15,19 @@ admm_nmr_fit(max_iter, ep_abs, ep_rel, A, B)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{max_iter}{
-%%     ~~Describe \code{max_iter} here~~
+Maximum number of iterations
 }
   \item{ep_abs}{
-%%     ~~Describe \code{ep_abs} here~~
+Parameter used for termination conditions
 }
   \item{ep_rel}{
-%%     ~~Describe \code{ep_rel} here~~
+Parameter used for termination conditions
 }
   \item{A}{
-%%     ~~Describe \code{A} here~~
+A is a train data set in the form of a three-dimensional array.
 }
   \item{B}{
-%%     ~~Describe \code{B} here~~
+B is a test image with occlusion.
 }
 }
 \details{
@@ -39,16 +41,12 @@ admm_nmr_fit(max_iter, ep_abs, ep_rel, A, B)
 %% ...
 }
 \references{
-%% ~put references to the literature/web site here ~
+
 }
-\author{
-%%  ~~who you are~~
-}
+\author{Jisun Kang}
 \note{
 %%  ~~further notes~~
 }
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
 %% ~~objects to See Also as \code{\link{help}}, ~~~
@@ -59,7 +57,7 @@ admm_nmr_fit(max_iter, ep_abs, ep_rel, A, B)
 ##--	or do  help(data=index)  for the standard data sets.
 
 ## The function is currently defined as
-function (max_iter, ep_abs, ep_rel, A, B) 
+function (max_iter, ep_abs, ep_rel, A, B)
 {
     p <- dim(A)[1]
     q <- dim(A)[2]

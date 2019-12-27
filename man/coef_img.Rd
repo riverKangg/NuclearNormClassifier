@@ -1,22 +1,21 @@
 \name{coef_img}
-\alias{coef_img}
-%- Also NEED an '\alias' for EACH other topic documented here.
+\alias{linear combination}
 \title{
-%%  ~~function to do ... ~~
+This function performs linear combination of train images.
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+
 }
 \usage{
 coef_img(A, x)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{A}{
-%%     ~~Describe \code{A} here~~
+A is a train data set in the form of a three-dimensional array.
 }
   \item{x}{
-%%     ~~Describe \code{x} here~~
+x is a coefficient vector for the train images.
 }
 }
 \details{
@@ -30,11 +29,9 @@ coef_img(A, x)
 %% ...
 }
 \references{
-%% ~put references to the literature/web site here ~
+
 }
-\author{
-%%  ~~who you are~~
-}
+\author{Jisun Kang}
 \note{
 %%  ~~further notes~~
 }
@@ -50,7 +47,7 @@ coef_img(A, x)
 ##--	or do  help(data=index)  for the standard data sets.
 
 ## The function is currently defined as
-function (A, x) 
+function (A, x)
 {
     p <- dim(A)[1]
     q <- dim(A)[2]
@@ -62,7 +59,5 @@ function (A, x)
     return(A_x)
   }
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+
+\keyword{Linear combination}
